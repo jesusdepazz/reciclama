@@ -1,0 +1,6 @@
+<svg width="158" height="48" viewBox="0 0 158 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="5" y="5" width="38" height="38" rx="6" stroke="#2ecc71" stroke-width="4"></rect>
+<path d="M18 17L28 31" stroke="#2ecc71" stroke-width="4" stroke-linecap="round"></path>
+<path d="M28 17L18 31" stroke="#2ecc71" stroke-width="4" stroke-linecap="round"></path>
+<text x="50" y="30" fill="#2ecc71" font-size="20" font-family="Arial" font-weight="bold">PLÁSTICO</text>
+</svg>
