@@ -1,5 +1,7 @@
 'use client'
 
+import RecomendacionesCarousel from "../components/RecomendacionesCarousel";
+
 const navigation = [
     { name: 'INICIO', href: '#hero' },
     { name: 'MISIÓN', href: '#mision' },
@@ -46,42 +48,67 @@ const values = [
     },
 ];
 
-const blogPosts = [
+const recomendacionCategories = [
     {
-        id: 1,
-        title: "Reciclaje eficiente de maquinaria pesada",
-        imageUrl: "/recomendaciones/recomendacion1.jpeg",
-        date: "Octubre 10, 2025",
-        datetime: "2025-10-10",
-        author: {
-            name: "Constructora La Firme",
-        },
-        description:
-            "Gracias a Reciclama, pudimos darle una segunda vida a nuestra maquinaria pesada obsoleta, reduciendo residuos y contribuyendo al cuidado del medio ambiente.",
+        key: "vehiculos",
+        title: "Vehículos y motos",
+        images: [
+            { src: "/reciclaje/20.jpeg", alt: "Vehículo 1", caption: "En Reciclama transformamos residuos metálicos en nuevas oportunidades. Nuestro servicio de desarme y recuperación de metales combina eficiencia, sostenibilidad y respaldo técnico, brindando incluso certificación del proceso de reciclaje para avalar cada etapa de recuperación." },
+            { src: "/reciclaje/21.jpeg", alt: "Vehículo 2" },
+        ],
     },
     {
-        id: 2,
-        title: "Transformando residuos de papel",
-        imageUrl: "/recomendaciones/recomendacion2.jpeg",
-        date: "Septiembre 22, 2025",
-        datetime: "2025-09-22",
-        author: {
-            name: "Editorial Letras Verdes",
-        },
-        description:
-            "Reciclama nos ayudó a gestionar el reciclaje de grandes volúmenes de papel, asegurando un proceso sostenible y fácil de implementar en nuestra empresa.",
+        key: "papel",
+        title: "Papel, cartón y plasticos",
+        images: [
+            { src: "/reciclaje/1.jpeg", alt: "Papel 1", caption: "En Reciclama, damos nueva vida a los materiales reciclables. Realizamos la recolección y compactado de papel, cartón y plásticos, asegurando que cada residuo sea aprovechado de forma responsable y sostenible, con certificación de reciclaje que respalda nuestro compromiso con el planeta." },
+            { src: "/reciclaje/2.jpeg", alt: "Papel 2" },
+            { src: "/reciclaje/3.jpeg", alt: "Papel 3" },
+            { src: "/reciclaje/5.jpeg", alt: "Papel 4" },
+            { src: "/reciclaje/6.jpeg", alt: "Papel 5" },
+            { src: "/reciclaje/7.jpeg", alt: "Papel 6" },
+            { src: "/reciclaje/10.jpeg", alt: "Papel 7" },
+            { src: "/reciclaje/27.jpeg", alt: "Papel 8" },
+            { src: "/reciclaje/28.jpeg", alt: "Papel 9" },
+        ],
     },
     {
-        id: 3,
-        title: "Reciclaje de equipos de cómputo",
-        imageUrl: "/recomendaciones/recomendacion3.jpeg",
-        date: "Agosto 15, 2025",
-        datetime: "2025-08-15",
-        author: {
-            name: "Tech Solutions S.A.",
-        },
-        description:
-            "Nuestros equipos obsoletos encontraron un nuevo propósito gracias a Reciclama. Reutilización responsable y manejo seguro de residuos electrónicos.",
+        key: "maquinaria",
+        title: "Maquinaria industrial",
+        images: [
+            { src: "/reciclaje/33.jpeg", alt: "Maquinaria 1", caption: "Brindamos soluciones confiables para la recolección y reciclaje de maquinaria industrial, con equipos especializados, manejo seguro de residuos y certificación garantizada que respalda la trazabilidad de todo el proceso." },
+            { src: "/reciclaje/34.jpeg", alt: "Maquinaria 2" },
+            { src: "/reciclaje/16.jpeg", alt: "Maquinaria 3" },
+        ],
+    },
+    {
+        key: "computo",
+        title: "Equipos de cómputo",
+        images: [
+            { src: "/reciclaje/11.jpeg", alt: "PC 1", caption: "En Reciclama, transformamos la tecnología en sostenibilidad. Nos encargamos de la recolección y reciclaje de equipos de cómputo, separando y recuperando materiales aprovechables, y asegurando la certificación ambiental de todo el proceso para cuidar el planeta y reducir los desechos electrónicos." },
+            { src: "/reciclaje/12.jpeg", alt: "PC 2" },
+            { src: "/reciclaje/17.jpeg", alt: "PC 3" },
+            { src: "/reciclaje/18.jpeg", alt: "PC 4" },
+            { src: "/reciclaje/31.jpeg", alt: "PC 5" },
+        ],
+    },
+    {
+        key: "metales",
+        title: "Metales, aluminio y mas",
+        images: [
+            { src: "/reciclaje/32.jpeg", alt: "Metales 1", caption: "En Reciclama ofrecemos un servicio especializado en la recolección, clasificación y recuperación de metales ferrosos y no ferrosos, incluyendo aluminio, cobre, acero y otros materiales industriales. Contamos con procesos certificados que aseguran la máxima eficiencia en el aprovechamiento de recursos, contribuyendo a una economía circular y sostenible." },
+            { src: "/reciclaje/30.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/29.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/26.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/25.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/24.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/23.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/15.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/14.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/13.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/9.jpeg", alt: "Metales 2" },
+            { src: "/reciclaje/8.jpeg", alt: "Metales 2" },
+        ],
     },
 ];
 
@@ -225,7 +252,7 @@ export default function Example() {
                                         <div className="relative">
                                             <img
                                                 alt="Reciclaje 1"
-                                                src="/reciclaje/reciclaje1.jpeg"
+                                                src="/reciclaje/1.jpeg"
                                                 className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                             />
                                             <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -236,7 +263,7 @@ export default function Example() {
                                         <div className="relative">
                                             <img
                                                 alt="Reciclaje 2"
-                                                src="/reciclaje/reciclaje2.jpeg"
+                                                src="/reciclaje/2.jpeg"
                                                 className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                             />
                                             <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -245,7 +272,7 @@ export default function Example() {
                                         <div className="relative">
                                             <img
                                                 alt="Reciclaje 3"
-                                                src="/reciclaje/reciclaje3.jpeg"
+                                                src="/reciclaje/3.jpeg"
                                                 className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                             />
                                             <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -256,7 +283,7 @@ export default function Example() {
                                         <div className="relative">
                                             <img
                                                 alt="Reciclaje 4"
-                                                src="/reciclaje/reciclaje4.jpeg"
+                                                src="/reciclaje/4.jpeg"
                                                 className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                             />
                                             <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -265,7 +292,7 @@ export default function Example() {
                                         <div className="relative">
                                             <img
                                                 alt="Reciclaje 5"
-                                                src="/reciclaje/reciclaje5.jpeg"
+                                                src="/reciclaje/5.jpeg"
                                                 className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                             />
                                             <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -379,45 +406,14 @@ export default function Example() {
                 <div id="recomendaciones" className="scroll-mt-32 mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
                         <h2 className="text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                            Recomendaciones de nuestros clientes
+                            ¿Qué hacemos?
                         </h2>
                         <p className="mt-2 text-lg/8 text-gray-600">
-                            Descubre cómo Reciclama ha ayudado a empresas y personas a darle una segunda vida a sus residuos y equipos obsoletos.
+                            En <strong>Reciclama</strong> nos especializamos en la gestión responsable de residuos, recuperando materiales aprovechables y garantizando procesos certificados de reciclaje que protegen el medio ambiente.
                         </p>
                     </div>
-                    <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                        {blogPosts.map((post) => (
-                            <article
-                                key={post.id}
-                                className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-                            >
-                                <img alt="" src={post.imageUrl} className="absolute inset-0 -z-10 size-full object-cover" />
-                                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
-                                <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
-
-                                <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-300">
-                                    <time dateTime={post.datetime} className="mr-8">
-                                        {post.date}
-                                    </time>
-                                    <div className="-ml-4 flex items-center gap-x-4">
-                                        <svg viewBox="0 0 2 2" className="-ml-0.5 size-0.5 flex-none fill-white/50">
-                                            <circle r={1} cx={1} cy={1} />
-                                        </svg>
-                                        <div className="flex gap-x-2.5">
-                                            {post.author.name}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h3 className="mt-3 text-lg/6 font-semibold text-white">
-                                    <a>
-                                        <span className="absolute inset-0" />
-                                        {post.title}
-                                    </a>
-                                </h3>
-                                <p className="mt-2 text-gray-200 text-base/6">{post.description}</p>
-                            </article>
-                        ))}
+                    <div className="mt-8">
+                        <RecomendacionesCarousel categories={recomendacionCategories} autoplay={6000} />
                     </div>
                 </div>
             </main>
