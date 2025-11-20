@@ -3,16 +3,16 @@
 import RecomendacionesCarousel from "../components/RecomendacionesCarousel";
 
 const navigation = [
-    { name: 'INICIO', href: '#hero' },
+    { name: 'INICIO', href: '#inicio' },
     { name: 'MISIÓN', href: '#mision' },
     { name: 'CONOCENOS', href: '#conocenos' },
-    { name: 'RECOMENDACIÓNES', href: '#recomendaciones' },
+    { name: 'TRABAJOS', href: '#trabajos' },
 ]
 
 const stats = [
-    { label: 'Clientes satisfechos', value: '+30' },
-    { label: 'Empresas que confían en nosotros', value: '+100' },
-    { label: 'Objetos reciclados y recuperados', value: '+1000' },
+    { label: 'Clientes satisfechos', value: '+100' },
+    { label: 'Empresas que confían en nosotros', value: '+150' },
+    { label: 'Objetos reciclados y recuperados', value: '+10,000' },
 ];
 
 const values = [
@@ -163,7 +163,7 @@ export default function Example() {
                         aria-label="Global"
                         className="relative mx-auto flex max-w-7xl items-center p-6 lg:px-8"
                     >
-                        <a href="#hero" className="flex items-center gap-2">
+                        <a href="#inicio" className="flex items-center gap-2">
                             <img
                                 src="/reciclaje_logo.png"
                                 alt="Reciclama Logo"
@@ -188,7 +188,7 @@ export default function Example() {
                 </header>
             </div>
             <main className="isolate">
-                <div id="hero" className="relative isolate -z-10 scroll-mt-32">
+                <div id="inicio" className="relative isolate -z-10 scroll-mt-32">
                     <svg
                         aria-hidden="true"
                         className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
@@ -262,7 +262,7 @@ export default function Example() {
                                     <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                                         <div className="relative">
                                             <img
-                                                alt="Reciclaje 2"
+                                                alt="Reciclaje 18"
                                                 src="/reciclaje/2.jpeg"
                                                 className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                             />
@@ -271,7 +271,7 @@ export default function Example() {
 
                                         <div className="relative">
                                             <img
-                                                alt="Reciclaje 3"
+                                                alt="Reciclaje 5"
                                                 src="/reciclaje/3.jpeg"
                                                 className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                             />
@@ -282,7 +282,7 @@ export default function Example() {
                                     <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                                         <div className="relative">
                                             <img
-                                                alt="Reciclaje 4"
+                                                alt="Reciclaje 31"
                                                 src="/reciclaje/4.jpeg"
                                                 className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                             />
@@ -291,7 +291,7 @@ export default function Example() {
 
                                         <div className="relative">
                                             <img
-                                                alt="Reciclaje 5"
+                                                alt="Reciclaje 33"
                                                 src="/reciclaje/5.jpeg"
                                                 className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                             />
@@ -403,10 +403,10 @@ export default function Example() {
                         </div>
                     </div>
                 </div>
-                <div id="recomendaciones" className="scroll-mt-32 mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+                <div id="trabajos" className="scroll-mt-32 mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
                         <h2 className="text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                            ¿Qué hacemos?
+                            Reciclajes realizados
                         </h2>
                         <p className="mt-2 text-lg/8 text-gray-600">
                             En <strong>Reciclama</strong> nos especializamos en la gestión responsable de residuos, recuperando materiales aprovechables y garantizando procesos certificados de reciclaje que protegen el medio ambiente.

@@ -66,7 +66,7 @@ export default function RecomendacionesCarousel({ categories, autoplay = 6000 })
         ))}
       </div>
       <div
-        className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-black/10 shadow-2xl border border-gray-200"
+        className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-black/10 shadow-2xl border border-gray-200"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
